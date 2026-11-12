@@ -1,0 +1,768 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Learn practical web development with CodeCraft tracks, courses, and projects."
+    />
+    <title>CodeCraft — Learn by building</title>
+    <link rel="icon" type="image/svg+xml" href="images/logo.svg" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="main-header">
+      <nav class="navbar" aria-label="Main navigation">
+        <a class="brand" href="#home">
+          <img src="images/logo.svg" alt="" />
+          <span>Code<span class="logo-accent">Craft</span></span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          type="button"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="navMenu"
+        >
+          ☰
+        </button>
+
+        <div class="nav-menu" id="navMenu">
+          <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#tracks">Tracks</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+
+          <div class="nav-actions">
+            <button class="button nav-auth-button" id="loginButton" type="button">
+              Login
+            </button>
+            <button class="button nav-auth-button" id="registerButton" type="button">
+              Register
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Home Section -->
+      <section class="page-section hero-section" id="home">
+        <div class="hero-layout">
+          <div class="hero-copy">
+            <p class="eyebrow">Practical coding lessons</p>
+            <h1>Learn web development by <span class="hero-accent">building useful things.</span></h1>
+            <p class="hero-description">
+              Follow a clear track, practice each skill, and put your lessons to
+              work in projects you can share.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#tracks">Explore Tracks</a>
+              <a class="button button-secondary" href="#courses">Browse Courses</a>
+            </div>
+            <p class="hero-note">Short lessons, guided exercises, and real projects.</p>
+          </div>
+
+          <div class="hero-art">
+            <img src="images/hero.jpg" alt="A developer working at a laptop" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Tracks Section -->
+      <section class="page-section tracks-section" id="tracks">
+        <div class="section-shell">
+          <div class="section-heading">
+            <p class="eyebrow">CAREER TRACKS</p>
+            <h2>Tracks</h2>
+            <p>Choose a roadmap and build practical skills step by step.</p>
+          </div>
+
+          <div class="track-grid">
+            <!-- Frontend Track Card -->
+            <article class="track-card frontend-track">
+              <span class="track-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48">
+                  <path d="m16 15-7 9 7 9M32 15l7 9-7 9M27 12l-6 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+              <p class="track-label">FRONTEND</p>
+              <h3>Frontend Development</h3>
+              <p class="track-description">Build accessible websites with HTML, CSS, and JavaScript.</p>
+              <div class="track-details">
+                <span>16 weeks</span>
+                <span>5 courses</span>
+                <span>Beginner to intermediate</span>
+              </div>
+              <div class="track-actions">
+                <a class="button button-secondary view-roadmap" href="#courses" data-track="frontend">
+                  View Roadmap
+                </a>
+                <button class="button button-primary start-track" type="button" data-track="frontend">
+                  Start Track
+                </button>
+              </div>
+            </article>
+
+            <!-- Backend Track Card -->
+            <article class="track-card backend-track">
+              <span class="track-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48">
+                  <ellipse cx="24" cy="11" rx="15" ry="6" fill="none" stroke="currentColor" stroke-width="3" />
+                  <path d="M9 11v26c0 3 7 6 15 6s15-3 15-6V11M9 20c0 3 7 6 15 6s15-3 15-6M9 29c0 3 7 6 15 6s15-3 15-6" fill="none" stroke="currentColor" stroke-width="3" />
+                </svg>
+              </span>
+              <p class="track-label">BACKEND</p>
+              <h3>Backend Development</h3>
+              <p class="track-description">Build server-side apps with C#, databases, and web APIs.</p>
+              <div class="track-details">
+                <span>20 weeks</span>
+                <span>5 courses</span>
+                <span>Beginner to advanced</span>
+              </div>
+              <div class="track-actions">
+                <a class="button button-secondary view-roadmap" href="#courses" data-track="backend">
+                  View Roadmap
+                </a>
+                <button class="button button-primary start-track" type="button" data-track="backend">
+                  Start Track
+                </button>
+              </div>
+            </article>
+
+            <!-- Mobile Development Track Card -->
+            <article class="track-card mobile-track">
+              <span class="track-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48">
+                  <rect x="14" y="5" width="20" height="38" rx="4" fill="none" stroke="currentColor" stroke-width="3" />
+                  <path d="M20 11h8M21 36h6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+                </svg>
+              </span>
+              <p class="track-label">MOBILE</p>
+              <h3>Mobile App Development</h3>
+              <p class="track-description">Create Flutter apps with mobile layouts, navigation, and local data.</p>
+              <div class="track-details">
+                <span>16 weeks</span>
+                <span>4 courses</span>
+                <span>Beginner to intermediate</span>
+              </div>
+              <div class="track-actions">
+                <a class="button button-secondary view-roadmap" href="#courses" data-track="mobile">
+                  View Roadmap
+                </a>
+                <button class="button button-primary start-track" type="button" data-track="mobile">
+                  Start Track
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Courses Section -->
+      <section class="page-section courses-section" id="courses">
+        <div class="section-shell">
+          <div class="section-heading">
+            <p class="eyebrow">COURSE ROADMAP</p>
+            <h2>Courses</h2>
+            <p>Choose a track to browse its lessons and projects.</p>
+          </div>
+
+          <div class="course-toolbar">
+            <div class="course-tabs" aria-label="Choose a learning track">
+              <button class="course-tab active" id="frontendTab" type="button" data-track="frontend">
+                Frontend
+              </button>
+              <button class="course-tab" id="backendTab" type="button" data-track="backend">
+                Backend
+              </button>
+              <button class="course-tab" id="mobileTab" type="button" data-track="mobile">
+                Mobile
+              </button>
+            </div>
+
+            <div class="course-controls">
+              <button
+                class="button button-secondary course-arrow"
+                id="previousCourses"
+                type="button"
+                aria-label="Previous courses"
+                disabled
+              >
+                &lt;
+              </button>
+              <span id="coursePageLabel">Page 1 of 2</span>
+              <button
+                class="button button-secondary course-arrow"
+                id="nextCourses"
+                type="button"
+                aria-label="Next courses"
+              >
+                &gt;
+              </button>
+            </div>
+          </div>
+
+          <!-- Frontend Course Roadmap -->
+          <div class="course-panel active" id="frontendCourses">
+            <div class="course-viewport">
+              <div class="course-pages">
+                <div class="course-page">
+                  <!-- HTML5 & Semantic Structure Course Card -->
+                  <article class="course-card">
+                    <div class="course-card-top">
+                      <span class="course-logo course-logo-html" aria-hidden="true">
+                        <svg viewBox="0 0 48 48">
+                          <path d="M10 5h28l-3 31-11 7-11-7z" fill="#E34F26" />
+                          <text x="24" y="31" fill="#FFFFFF" font-size="17" font-weight="700" text-anchor="middle">5</text>
+                        </svg>
+                      </span>
+                      <span class="course-level">Beginner</span>
+                    </div>
+                    <h3>HTML5 &amp; Semantic Structure</h3>
+                    <p class="course-description">Write semantic markup for pages that are clear, accessible, and easy to maintain.</p>
+                    <div class="course-card-footer">
+                      <span class="course-meta">12 Lessons</span>
+                      <a class="button button-primary course-action" href="#contact">Start Course</a>
+                    </div>
+                  </article>
+
+                  <!-- CSS3, Flexbox & Grid Layouts Course Card -->
+                  <article class="course-card">
+                    <div class="course-card-top">
+                      <span class="course-logo course-logo-css" aria-hidden="true">
+                        <svg viewBox="0 0 48 48">
+                          <path d="M10 5h28l-3 31-11 7-11-7z" fill="#1572B6" />
+                          <text x="24" y="31" fill="#FFFFFF" font-size="17" font-weight="700" text-anchor="middle">3</text>
+                        </svg>
+                      </span>
+                      <span class="course-level">Beginner</span>
+                    </div>
+                    <h3>CSS3, Flexbox &amp; Grid Layouts</h3>
+                    <p class="course-description">Build responsive page layouts with modern CSS, Flexbox, and Grid.</p>
+                    <div class="course-card-footer">
+                      <span class="course-meta">16 Lessons</span>
+                      <a class="button button-primary course-action" href="#contact">Start Course</a>
+                    </div>
+                  </article>
+
+                  <!-- Modern JavaScript Basics Course Card -->
+                  <article class="course-card">
+                    <div class="course-card-top">
+                      <span class="course-logo course-logo-js" aria-hidden="true">
+                        <svg viewBox="0 0 48 48">
+                          <rect x="5" y="5" width="38" height="38" rx="6" fill="#F7DF1E" />
+                          <text x="24" y="31" fill="#111827" font-size="15" font-weight="700" text-anchor="middle">JS</text>
+                        </svg>
+                      </span>
+                      <span class="course-level">Beginner</span>
+                    </div>
+                    <h3>Modern JavaScript Basics</h3>
+                    <p class="course-description">Use variables, functions, events, and DOM updates to add useful behavior.</p>
+                    <div class="course-card-footer">
+                      <span class="course-meta">20 Lessons</span>
+                      <a class="button button-primary course-action" href="#contact">Start Course</a>
+                    </div>
+                  </article>
+                </div>
+
+                <div class="course-page">
+                  <!-- Responsive Web Design Course Card -->
+                  <article class="course-card">
+                    <div class="course-card-top">
+                      <span class="course-logo course-logo-responsive" aria-hidden="true">
+                        <svg viewBox="0 0 48 48">
+                          <rect x="4" y="8" width="30" height="22" rx="3" fill="none" stroke="currentColor" stroke-width="3" />
+                          <path d="M14 36h10M19 30v6" fill="none" stroke="currentColor" stroke-width="3" />
+                          <rect x="32" y="16" width="12" height="24" rx="3" fill="#FFFFFF" stroke="currentColor" stroke-width="3" />
+                          <circle cx="38" cy="35" r="1.5" fill="currentColor" />
+                        </svg>
+                      </span>
+                      <span class="course-level">Beginner</span>
+                    </div>
+                    <h3>Responsive Web Design</h3>
+                    <p class="course-description">Adapt page layouts and controls for phones, tablets, and larger screens.</p>
+                    <div class="course-card-footer">
+                      <span class="course-meta">14 Lessons</span>
+                      <a class="button button-primary course-action" href="#contact">Start Course</a>
+                    </div>
+                  </article>
+
+                  <!-- Git & GitHub Workflow Course Card -->
+                  <article class="course-card">
+                    <div class="course-card-top">
+                      <span class="course-logo course-logo-git" aria-hidden="true">
+                        <svg viewBox="0 0 48 48">
+                          <path d="M14 11v22M14 20h18v13" fill="none" stroke="currentColor" stroke-width="3" />
+                          <circle cx="14" cy="10" r="5" fill="#F05032" />
+                          <circle cx="14" cy="34" r="5" fill="#F05032" />
+                          <circle cx="32" cy="34" r="5" fill="#F05032" />
+                          <circle cx="32" cy="20" r="5" fill="#F05032" />
+                        </svg>
+                      </span>
+                      <span class="course-level">Beginner</span>
+                    </div>
+                    <h3>Git &amp; GitHub Workflow</h3>
+                    <p class="course-description">Save changes, work with branches, and share code through GitHub.</p>
+                    <div class="course-card-footer">
+                      <span class="course-meta">12 Lessons</span>
+                      <a class="button button-primary course-action" href="#contact">Start Course</a>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Backend Course Roadmap -->
+          <div class="course-panel" id="backendCourses">
+            <div class="course-viewport">
+              <div class="course-pages">
+                <div class="course-page">
+                  <!-- C# Programming Fundamentals Course Card -->
+                  <article class="course-card">
+                    <div class="course-card-top">
+                      <span class="course-logo course-logo-csharp" aria-hidden="true">
+                        <svg viewBox="0 0 48 48">
+                          <circle cx="24" cy="24" r="20" fill="#68217A" />
+                          <text x="24" y="30" fill="#FFFFFF" font-size="15" font-weight="700" text-anchor="middle">C#</text>
+                        </svg>
+                      </span>
+                      <span class="course-level">Beginner</span>
+                    </div>
+                    <h3>C# Programming Fundamentals</h3>
+                    <p class="course-description">Practice types, methods, classes, and language features used in web apps.</p>
+                    <div class="course-card-footer">
+                      <span class="course-meta">18 Lessons</span>
+                      <a class="button button-primary course-action" href="#contact">Start Course</a>
+                    </div>
+                  </article>
+
+                  <!-- Object-Oriented Programming Course Card -->
+                  <article class="course-card">
+                    <div class="course-card-top">
+                      <span class="course-logo course-logo-oop" aria-hidden="true">
+                        <svg viewBox="0 0 48 48">
+                          <rect x="5" y="7" width="16" height="15" rx="3" fill="none" stroke="currentColor" stroke-width="3" />
+                          <rect x="27" y="7" width="16" height="15" rx="3" fill="none" stroke="currentColor" stroke-width="3" />
+                          <rect x="16" y="27" width="16" height="15" rx="3" fill="none" stroke="currentColor" stroke-width="3" />
+                        </svg>
+                      </span>
+                      <span class="course-level">Intermediate</span>
+                    </div>
+                    <h3>Object-Oriented Programming (OOP)</h3>
+                    <p class="course-description">Organize code with classes, objects, interfaces, and reusable behavior.</p>
+                    <div class="course-card-footer">
+                      <span class="course-meta">16 Lessons</span>
+                      <a class="button button-primary course-action" href="#contact">Start Course</a>
+                    </div>
+                  </article>
+
+                  <!-- SQL Server & Database Design Course Card -->
+                  <article class="course-card">
+                    <div class="course-card-top">
+                      <span class="course-logo course-logo-database" aria-hidden="true">
+                        <svg viewBox="0 0 48 48">
+                          <ellipse cx="24" cy="10" rx="16" ry="6" fill="none" stroke="currentColor" stroke-width="3" />
+                          <path d="M8 10v27c0 3 7 6 16 6s16-3 16-6V10M8 19c0 3 7 6 16 6s16-3 16-6M8 28c0 3 7 6 16 6s16-3 16-6" fill="none" stroke="currentColor" stroke-width="3" />
+                        </svg>
+                      </span>
+                      <span class="course-level">Intermediate</span>
+                    </div>
+                    <h3>SQL Server &amp; Database Design</h3>
+                    <p class="course-description">Design relational tables and query application data with SQL.</p>
+                    <div class="course-card-footer">
+                      <span class="course-meta">20 Lessons</span>
+                      <a class="button button-primary course-action" href="#contact">Start Course</a>
+                    </div>
+                  </article>
+                </div>
+
+                <div class="course-page">
+                  <!-- ASP.NET Core Web APIs Course Card -->
+                  <article class="course-card">
+                    <div class="course-card-top">
+                      <span class="course-logo course-logo-api" aria-hidden="true">
+                        <svg viewBox="0 0 48 48">
+                          <rect x="6" y="7" width="36" height="10" rx="3" fill="none" stroke="currentColor" stroke-width="3" />
+                          <rect x="6" y="21" width="36" height="10" rx="3" fill="none" stroke="currentColor" stroke-width="3" />
+                          <rect x="6" y="35" width="36" height="7" rx="3" fill="none" stroke="currentColor" stroke-width="3" />
+                          <circle cx="13" cy="12" r="1.5" fill="currentColor" />
+                          <circle cx="13" cy="26" r="1.5" fill="currentColor" />
+                        </svg>
+                      </span>
+                      <span class="course-level">Intermediate</span>
+                    </div>
+                    <h3>ASP.NET Core Web APIs</h3>
+                    <p class="course-description">Build endpoints that validate requests and return useful responses.</p>
+                    <div class="course-card-footer">
+                      <span class="course-meta">22 Lessons</span>
+                      <a class="button button-primary course-action" href="#contact">Start Course</a>
+                    </div>
+                  </article>
+
+                  <!-- Authentication & Data Security Course Card -->
+                  <article class="course-card">
+                    <div class="course-card-top">
+                      <span class="course-logo course-logo-security" aria-hidden="true">
+                        <svg viewBox="0 0 48 48">
+                          <path d="M24 5 39 11v11c0 10-6 16-15 21C15 38 9 32 9 22V11z" fill="none" stroke="currentColor" stroke-width="3" />
+                          <rect x="18" y="21" width="12" height="10" rx="2" fill="currentColor" />
+                          <path d="M21 21v-3a3 3 0 0 1 6 0v3" fill="none" stroke="currentColor" stroke-width="3" />
+                        </svg>
+                      </span>
+                      <span class="course-level">Intermediate</span>
+                    </div>
+                    <h3>Authentication &amp; Data Security</h3>
+                    <p class="course-description">Protect application data with sign-in, authorization, and safer defaults.</p>
+                    <div class="course-card-footer">
+                      <span class="course-meta">18 Lessons</span>
+                      <a class="button button-primary course-action" href="#contact">Start Course</a>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mobile Course Roadmap -->
+          <div class="course-panel" id="mobileCourses">
+            <div class="course-viewport">
+              <div class="course-pages">
+                <div class="course-page">
+                  <!-- Dart Programming Basics Course Card -->
+                  <article class="course-card">
+                    <div class="course-card-top">
+                      <span class="course-logo course-logo-dart" aria-hidden="true">
+                        <svg viewBox="0 0 48 48">
+                          <path d="M8 28 27 8h13L20 30l-5 10z" fill="#0175C2" />
+                          <path d="m20 30 11-11 10 10-12 12z" fill="#13B9FD" />
+                          <path d="M8 28 5 40l10 0 5-10z" fill="#0175C2" />
+                        </svg>
+                      </span>
+                      <span class="course-level">Beginner</span>
+                    </div>
+                    <h3>Dart Programming Basics</h3>
+                    <p class="course-description">Learn Dart variables, functions, collections, and asynchronous basics.</p>
+                    <div class="course-card-footer">
+                      <span class="course-meta">16 Lessons</span>
+                      <a class="button button-primary course-action" href="#contact">Start Course</a>
+                    </div>
+                  </article>
+
+                  <!-- Flutter UI & Widgets Course Card -->
+                  <article class="course-card">
+                    <div class="course-card-top">
+                      <span class="course-logo course-logo-flutter" aria-hidden="true">
+                        <svg viewBox="0 0 48 48">
+                          <rect x="5" y="5" width="16" height="16" rx="3" fill="#02569B" />
+                          <rect x="27" y="5" width="16" height="16" rx="3" fill="#13B9FD" />
+                          <rect x="5" y="27" width="16" height="16" rx="3" fill="#13B9FD" />
+                          <rect x="27" y="27" width="16" height="16" rx="3" fill="#02569B" />
+                        </svg>
+                      </span>
+                      <span class="course-level">Beginner</span>
+                    </div>
+                    <h3>Flutter UI &amp; Widgets</h3>
+                    <p class="course-description">Arrange screens with Flutter widgets, layouts, and reusable components.</p>
+                    <div class="course-card-footer">
+                      <span class="course-meta">20 Lessons</span>
+                      <a class="button button-primary course-action" href="#contact">Start Course</a>
+                    </div>
+                  </article>
+
+                  <!-- Mobile Navigation & State Management Course Card -->
+                  <article class="course-card">
+                    <div class="course-card-top">
+                      <span class="course-logo course-logo-mobile" aria-hidden="true">
+                        <svg viewBox="0 0 48 48">
+                          <rect x="12" y="4" width="24" height="40" rx="5" fill="none" stroke="currentColor" stroke-width="3" />
+                          <path d="M19 11h10M19 18h10M19 25h6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+                          <path d="m25 31 4 4 7-8" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </span>
+                      <span class="course-level">Intermediate</span>
+                    </div>
+                    <h3>Mobile Navigation &amp; State Management</h3>
+                    <p class="course-description">Move between screens and keep app data in sync as users interact.</p>
+                    <div class="course-card-footer">
+                      <span class="course-meta">18 Lessons</span>
+                      <a class="button button-primary course-action" href="#contact">Start Course</a>
+                    </div>
+                  </article>
+                </div>
+
+                <div class="course-page">
+                  <!-- Mobile APIs & Local Storage Course Card -->
+                  <article class="course-card">
+                    <div class="course-card-top">
+                      <span class="course-logo course-logo-mobile-storage" aria-hidden="true">
+                        <svg viewBox="0 0 48 48">
+                          <ellipse cx="17" cy="11" rx="11" ry="5" fill="none" stroke="currentColor" stroke-width="3" />
+                          <path d="M6 11v17c0 3 5 5 11 5s11-2 11-5V11M6 19c0 3 5 5 11 5s11-2 11-5" fill="none" stroke="currentColor" stroke-width="3" />
+                          <path d="M29 20h12M36 15l5 5-5 5" fill="none" stroke="#1DB954" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </span>
+                      <span class="course-level">Intermediate</span>
+                    </div>
+                    <h3>Mobile APIs &amp; Local Storage</h3>
+                    <p class="course-description">Fetch data from APIs and save useful information on a device.</p>
+                    <div class="course-card-footer">
+                      <span class="course-meta">16 Lessons</span>
+                      <a class="button button-primary course-action" href="#contact">Start Course</a>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section class="page-section about-section" id="about">
+        <div class="section-shell">
+          <div class="about-copy">
+            <p class="eyebrow">WHO WE ARE</p>
+            <h2>About Us</h2>
+            <p>
+              CodeCraft teaches practical development through clear learning
+              paths, regular coding practice, and projects students can share.
+            </p>
+          </div>
+
+          <div class="about-cards">
+            <!-- Structured Learning Paths Card -->
+            <article class="about-card">
+              <span class="about-icon" aria-hidden="true">≡</span>
+              <h3>Structured Learning Paths</h3>
+              <p>Follow a clear sequence of lessons, from core web skills to complete projects.</p>
+            </article>
+
+            <!-- Hands-On Coding Practice Card -->
+            <article class="about-card">
+              <span class="about-icon" aria-hidden="true">&lt;/&gt;</span>
+              <h3>Hands-On Coding Practice</h3>
+              <p>Practice new concepts with focused exercises as you work through each track.</p>
+            </article>
+
+            <!-- Real Portfolio Projects Card -->
+            <article class="about-card">
+              <span class="about-icon" aria-hidden="true">▤</span>
+              <h3>Real Portfolio Projects</h3>
+              <p>Build finished web projects that show what you can do to future collaborators.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="page-section contact-section" id="contact">
+        <div class="section-shell">
+          <div class="section-heading">
+            <p class="eyebrow">Contact CodeCraft</p>
+            <h2>Questions about a course or track?</h2>
+            <p>Send a message and tell us what you are looking to learn.</p>
+          </div>
+
+          <div class="contact-layout">
+            <div class="contact-info">
+              <p>Our team can help with course details, track choices, and getting started.</p>
+              <!-- Email Contact Card -->
+              <div class="contact-detail">
+                <h3>Email</h3>
+                <a href="mailto:support@codecraft.edu">support@codecraft.edu</a>
+              </div>
+              <!-- Location Contact Card -->
+              <div class="contact-detail">
+                <h3>Location</h3>
+                <p>Online, wherever you are</p>
+              </div>
+              <!-- Working Hours Contact Card -->
+              <div class="contact-detail">
+                <h3>Working hours</h3>
+                <p>Monday–Friday, 9:00 AM–5:00 PM</p>
+              </div>
+            </div>
+
+            <form class="contact-form" id="contactForm">
+              <div class="form-row">
+                <label for="fullName">
+                  Full name
+                  <input id="fullName" name="name" type="text" autocomplete="name" required />
+                </label>
+                <label for="contactEmail">
+                  Email address
+                  <input id="contactEmail" name="email" type="email" autocomplete="email" required />
+                </label>
+              </div>
+              <label for="contactTopic">
+                Track or topic
+                <select id="contactTopic" name="topic" required>
+                  <option value="" selected disabled>Select a topic</option>
+                  <option>Frontend Development</option>
+                  <option>Backend Development</option>
+                  <option>Mobile App Development</option>
+                  <option>Other question</option>
+                </select>
+              </label>
+              <label for="contactMessage">
+                Message
+                <textarea id="contactMessage" name="message" rows="4" required></textarea>
+              </label>
+              <button class="button button-primary" type="submit">Send message</button>
+              <p class="form-status" id="contactStatus" role="status"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Login and Register Modals -->
+    <div class="modal-backdrop" id="modalBackdrop">
+      <!-- Login Modal -->
+      <section class="auth-modal" id="loginModal" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+        <button class="modal-close" type="button" aria-label="Close login dialog">&times;</button>
+        <div class="modal-heading">
+          <div class="brand modal-brand">
+            <img src="images/logo.svg" alt="" />
+            <span>Code<span class="logo-accent">Craft</span></span>
+          </div>
+          <h2 id="loginTitle">Welcome back</h2>
+          <p>Sign in to continue learning.</p>
+        </div>
+        <form class="auth-form" id="loginForm">
+          <label for="loginEmail">
+            Email address
+            <input id="loginEmail" name="email" type="email" autocomplete="email" required />
+          </label>
+          <label for="loginPassword">
+            Password
+            <input id="loginPassword" name="password" type="password" autocomplete="current-password" required />
+          </label>
+          <div class="auth-options">
+            <label for="rememberMe">
+              <input id="rememberMe" name="remember" type="checkbox" />
+              Remember me
+            </label>
+            <a href="mailto:support@codecraft.edu?subject=Password%20reset">Forgot password?</a>
+          </div>
+          <button class="button button-primary auth-submit" type="submit">Login</button>
+          <p class="auth-status" id="loginStatus" role="status"></p>
+        </form>
+        <p class="auth-switch">
+          Don’t have an account?
+          <a class="modal-switch" href="#registerModal">Register now</a>
+        </p>
+      </section>
+
+      <!-- Register Modal -->
+      <section class="auth-modal" id="registerModal" role="dialog" aria-modal="true" aria-labelledby="registerTitle">
+        <button class="modal-close" type="button" aria-label="Close registration dialog">&times;</button>
+        <div class="modal-heading">
+          <div class="brand modal-brand">
+            <img src="images/logo.svg" alt="" />
+            <span>Code<span class="logo-accent">Craft</span></span>
+          </div>
+          <h2 id="registerTitle">Create your account</h2>
+          <p>Save your progress and keep learning.</p>
+        </div>
+        <form class="auth-form" id="registerForm">
+          <label for="registerName">
+            Full name
+            <input id="registerName" name="name" type="text" autocomplete="name" required />
+          </label>
+          <label for="registerEmail">
+            Email address
+            <input id="registerEmail" name="email" type="email" autocomplete="email" required />
+          </label>
+          <label for="registerPassword">
+            Password
+            <input id="registerPassword" name="password" type="password" autocomplete="new-password" minlength="8" required />
+          </label>
+          <label for="confirmPassword">
+            Confirm password
+            <input id="confirmPassword" name="confirmPassword" type="password" autocomplete="new-password" minlength="8" required />
+          </label>
+          <label for="preferredTrack">
+            Preferred track
+            <select id="preferredTrack" name="track" required>
+              <option value="" selected disabled>Select a learning track</option>
+              <option value="frontend">Frontend</option>
+              <option value="backend">Backend</option>
+              <option value="mobile">Mobile App Development</option>
+            </select>
+          </label>
+          <button class="button button-primary auth-submit" type="submit">Create Account</button>
+          <p class="auth-status" id="registerStatus" role="status"></p>
+        </form>
+        <p class="auth-switch">
+          Already have an account?
+          <a class="modal-switch" href="#loginModal">Login</a>
+        </p>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+      <div class="footer-container">
+        <!-- Footer Brand Card -->
+        <div class="footer-column footer-brand-column">
+          <a class="brand footer-brand" href="#home">
+            <img src="images/logo.svg" alt="" />
+            <span>Code<span class="logo-accent">Craft</span></span>
+          </a>
+          <p>Practical coding lessons and projects for new web developers.</p>
+        </div>
+
+        <!-- Footer Quick Links Card -->
+        <div class="footer-column">
+          <h2>Quick links</h2>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#tracks">Tracks</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Footer Learning Tracks Card -->
+        <div class="footer-column">
+          <h2>Learning tracks</h2>
+          <ul>
+            <li><a href="#tracks">Frontend Development</a></li>
+            <li><a href="#tracks">Backend Development</a></li>
+            <li><a href="#tracks">Mobile App Development</a></li>
+          </ul>
+        </div>
+
+        <!-- Footer Contact Card -->
+        <div class="footer-column footer-connect">
+          <h2>Stay connected</h2>
+          <p>Contact us about courses, tracks, and getting started.</p>
+          <a href="mailto:support@codecraft.edu">support@codecraft.edu</a>
+          <div class="social-links">
+            <a href="https://github.com/" aria-label="GitHub">GitHub</a>
+            <a href="https://www.linkedin.com/" aria-label="LinkedIn">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright Bar -->
+      <div class="footer-bottom">
+        <p>© 2026 CodeCraft. All rights reserved.</p>
+        <a href="#home">Back to top</a>
+      </div>
+    </footer>
+  </body>
+</html>
